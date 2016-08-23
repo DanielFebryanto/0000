@@ -1,0 +1,154 @@
+
+ul.browser-default li {
+  list-style-type: initial;
+}
+
+/*modal custom*/
+.modal {
+  width: 35% !important;
+  top: 3% !important;
+}
+
+/*banner*/
+.carousel {
+  height: 500px !important;
+}
+
+
+/*promotion*/
+.pad {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /*line-height: 35px;*/
+}
+
+/*.pad img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}*/
+
+.boxv {
+  overflow: hidden;
+}
+
+.boxv img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.presisi {
+  padding: 0px 37px;
+  vertical-align: middle;
+}
+
+/*galery*/
+.bac {
+  background-color: magenta;
+}
+
+
+/*footer*/
+.page-footer {
+  margin-top: 0px !important;
+}
+
+
+/*----------------------------------------------------region company register and login------------------------------------------------------*/
+
+
+.bor {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  border: 1px solid gray;
+}
+
+.bor .card-content .card-title {
+  font-weight: 600;
+}
+
+
+.log-wrapper {
+  padding: 0px 20px;
+}
+
+
+
+
+/*--------------------------------------------------------region maincontent-----------------------------------------------------------------*/
+
+
+
+.search {
+  position: absolute;
+  left: 10em;
+  right: 25em;
+  color: black;
+}
+
+.search-wrapper {
+  margin: 10px 20px;
+  padding: 0;
+}
+
+.search-wrapper input#search {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.search-wrapper input[type=search].focus {
+  border-bottom: 1px solid red;
+}
+
+.search-wrapper i.pos {
+  position: absolute;
+  top: -10px;
+  left: -37px;
+}
+
+.content-main {
+  padding-left: 20px;
+}
+
+
+
+/*--------------------------------------------------------region about sponsor-----------------------------------------------------------------*/
+
+.title {
+  padding: 10px 0px;
+}
+
+.content-about {
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+
+.reg-button-about {
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+
+
+/*----------------------------------------------------------region main/ admin------------------------------------------------------------------*/
+
+.main-content {
+    padding-left: 240px;
+    margin-top: 5.8em;
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 80%;
+  }
+}
+
+.logo {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
