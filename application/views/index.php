@@ -4,9 +4,9 @@
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>GilangCI/assets/css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>GilangCI/assets/css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>GilangCI/assets/css/mycss.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>assets/css/mycss.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -32,7 +32,7 @@
             <li><a class="modal-trigger" href="#modal1">Sign In</a></li>
             <li><a class="modal-trigger" href="#modal2">Register</a></li>
             <li><a class="waves-effect waves-light btn">Company</a></li>
-          </ul>
+          </ul> 
         </div>
       </nav>
       <!-- end of navbar top -->
@@ -238,8 +238,8 @@
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
-      <script type="text/javascript" src="<?php echo base_url() ?>GilangCI/assets/js/materialize.min.js"></script>
-      <script type="text/javascript" src="<?php echo base_url() ?>GilangCI/assets/js/myjs.js"></script>
+      <script type="text/javascript" src="<?php echo base_url() ?>assets/js/materialize.min.js"></script>
+      <script type="text/javascript" src="<?php echo base_url() ?>assets/js/myjs.js"></script>
       <script type="text/javascript">
       $(function(){
         $(".button-collapse").sideNav();
