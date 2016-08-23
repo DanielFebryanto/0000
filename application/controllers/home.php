@@ -11,7 +11,7 @@ class Home extends CI_Controller {
   {
     $this->load->view("index");
   }
-    function testRegis(){
+  function testRegis(){
       $value = array('nama'=>$_POST['nama']);
       $this->homeModel->registerInsert($value);
     }
