@@ -15,7 +15,6 @@ class HomeModel extends CI_Model {
     }
   }
 
-
   function memberLogin(){
     $check = $this->db->select_where('member', $value);
 
