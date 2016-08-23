@@ -6,12 +6,20 @@ class Template extends CI_Controller{
         $this->_ci= &get_instance();
     }
     
-    function app_display($template, $data=null){
+    function sposorDisplay($template, $data=null){
         $data['_content']=$this->_ci->load->view($template,$data, true);
         $data['_header']=$this->_ci->load->view('header',$data, true);
         $data['_sidebar']=$this->_ci->load->view('side_bar',$data, true);
        // $data['_footer']=$this->_ci->load->view('admin/footer',$data, true);
-        $this->_ci->load->view('/template.php',$data);
+        $this->_ci->load->view('/sponsoTemplate.php',$data);
+    }
+
+    function memberDisplay($template, $data=null){
+        $data['_content']=$this->_ci->load->view($template,$data, true);
+        $data['_header']=$this->_ci->load->view('header',$data, true);
+        $data['_sidebar']=$this->_ci->load->view('side_bar',$data, true);
+       // $data['_footer']=$this->_ci->load->view('admin/footer',$data, true);
+        $this->_ci->load->view('/memberTemplate.php',$data);
     }
 
 }
