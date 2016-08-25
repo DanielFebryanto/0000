@@ -128,14 +128,21 @@ class AplicationModel extends CI_Model {
 	  		return false;
 	  	}
 	}
-	  	function upateEvent($clause, $value){
-	  		$this->db->where($clause);
-	  		$update = $this->db->update('event',$value);
+	function getEventById($clause){
+		$this->db->join('proposal','proposal.id_proposal=event.proposal_ID');
+		$this->db->join('sponsor','sponsor.idsponsor=event.sponsor_ID');
+		$event = $this->db->get_where('event',$clause);
 
-	  		if($update){
-	  			return true;
-	  		}
-	  		return false;
+		return $event;
+	}
+	function upateEvent($clause, $value){
+	  	$this->db->where($clause);
+	  	$update = $this->db->update('event',$value);
+
+	  	if($update){
+	  		return true;
 	  	}
+	  	return false;
+	 }
 
 }//end class

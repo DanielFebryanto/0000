@@ -27,7 +27,7 @@ class Sponsor extends CI_Controller {
   	$value=array(
   		'nama_sponsor'=>$_POST['nama_sponsor'],
   		'about_sponsor'=>$_POST['about_sponsor'],
-  		'industri_sponsor'=>$_POST['industri_sponsor'],
+  		'industri_ID'=>$_POST['industri_ID'],
   		'email'=>$_POST['email'],
   		'website'=>$_POST['website'],
   		'username'=>$_POST['username'],
@@ -72,7 +72,33 @@ class Sponsor extends CI_Controller {
   	$this->load->view('sponsor/proposalDetail', $data);
   }
 
-  function approvePage(){
-    
-  }
+  function approvePage($idProp, $idsponsor){
+    $val = array('id_proposal'=>$idProp);
+    $mem = $this->aplicationModel->getProposalById($val);
+    foreach($mem->result_array() as $row){
+      $id_member = $row['member_ID'];
+    }
+    $data['approve'] = array('idProp'=>$idProp, 'idsponsor'=>$idsponsor,'id_member'=>$id_member);
+
+    $this->load->view('sponsor/approve', $data);
+   }
+   function doApprove(){
+    $value = array(
+      'proposal_ID'=>$_POST['proposal_ID'],
+      'sponsor_ID'=>$_POST['idsponsor'],
+      'pesan_sponsor'=>$_POST['pesan'],
+      'status'=>'Accept'
+      'tgl_buat'=>date("Y-m-d")
+      );
+
+    $insert = $this->aplicationModel->insertEvent($value);
+
+    if($insert == true){
+      $this->session->set_flashdata('sukses','Berhasil, Member akan segera menghubungi anda untuk kelanjutan.');
+      redirect('sponsor/offer');
+    }else{
+      $this->session->set_flashdata('error','Maaf, ada kesalahan.');
+      redirect('sponsor/approvePage');
+    }
+   }
 }//end of class
