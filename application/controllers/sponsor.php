@@ -71,4 +71,8 @@ class Sponsor extends CI_Controller {
 
   	$this->load->view('sponsor/proposalDetail', $data);
   }
+
+  function approvePage(){
+    
+  }
 }//end of class

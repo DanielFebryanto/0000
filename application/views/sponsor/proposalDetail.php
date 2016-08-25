@@ -125,7 +125,7 @@
 
           <div class="reg-button-about right">
             <a href="#" class="waves-effect waves-light btn-large" href="maincontent.html">Reject</a>
-            <a href="additionalmsg.html" class="waves-effect waves-light yellow btn-large black-text">Accept</a>
+            <a href="<?php echo base_url() ?>sponsor/approvePage/<?php echo''.$row['id_proposal'].'/'.$this->session->userdata('id').''" class="waves-effect waves-light yellow btn-large black-text">Accept</a>
           </div>
         </div>
         <?php } ?>
