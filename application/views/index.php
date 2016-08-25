@@ -12,138 +12,9 @@
     </head>
 
     <body>
-
+<?php echo $this->session->flashdata('error') ?>
     <!-- navbar-top -->
-      <nav>
-        <div class="nav-wrapper container">
-          <a href="#!" class="brand-logo">Logo</a>
-          <!-- trigger mobile button -->
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <!-- main menu-->
-          <ul class="right hide-on-med-and-down">
-            <!-- Modal Trigger for sign in-->
-            <li><a class="modal-trigger" href="#modal1">Sign In</a></li>
-            <li><a class="modal-trigger" href="#modal2">Register</a></li>
-            <li><a class="waves-effect waves-light btn" href="company.html">Company</a></li>
-          </ul>
-          <!-- mobile menu -->
-          <ul class="side-nav" id="mobile-demo">
-            <!-- Modal Trigger for sign in-->
-            <li><a class="modal-trigger" href="#modal1">Sign In</a></li>
-            <li><a class="modal-trigger" href="#modal2">Register</a></li>
-            <li><a class="waves-effect waves-light btn">Company</a></li>
-          </ul> 
-        </div>
-      </nav>
-      <!-- end of navbar top -->
-
-      <!-- modal for sign in user -->
-       <!-- Modal Structure -->
-       <div id="modal1" class="modal">
-         <div class="modal-content">
-           <h4>Sign In</h4>
-           <div class="divider"></div>
-           <div class="section"></div>
-           <!-- form -->
-           <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="text" type="text" class="validate">
-                  <label for="email">Username</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- end of form -->
-         </div>
-         <div class="modal-footer">
-           <a href="#!" class="modal-action waves-effect waves-green btn">Login</a>
-           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-         </div>
-       </div>
-
-      <!-- modal for register user -->
-      <div id="modal2" class="modal modal-fixed-footer">
-        <div class="modal-content">
-          <h4>Register</h4>
-          <div class="divider"></div>
-          <div class="section"></div>
-          <!-- form -->
-          <div class="row">
-           <form action"<?php echo base_url() ?> GilangCI/index.php/Home/registerInsert" method="post" class="col s12">
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="text" class="validate" name="">
-                 <label for="nama">Nama</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="email" class="validate" name="">
-                 <label for="email">Email</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="text" class="validate" name="">
-                 <label for="tlp">No Telepon</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="url" class="validate" name="">
-                 <label for="url">Website</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="text" class="validate" name="">
-                 <label for="alamat">Alamat</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="text" class="validate" name="">
-                 <label for="portofolio">Portofolio</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <textarea id="textarea1" class="materialize-textarea" name=""></textarea>
-                 <label for="about">About</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="text" type="text" class="validate" name="">
-                 <label for="username">Username</label>
-               </div>
-             </div>
-             <div class="row">
-               <div class="input-field col s12">
-                 <input id="password" type="text" class="validate" name="">
-                 <label for="password">Password</label>
-               </div>
-             </div>
-           <!-- end of form -->
-         </div>
-         <!-- end of form -->
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action waves-effect waves-green btn">Register</a>
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
-        </form>
-      </div>
-
-
+      <?php $this->load->view('header') ?>
     <!-- banner -->
       <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-item valign-wrapper red white-text row" href="#one!">
@@ -151,7 +22,7 @@
               <h4>Sponsor Online Untuk EO</h4>
               <p>Buruan Daftar</p>
               <a class="waves-effect waves-light btn yellow black-text modal-trigger" href="#modal2">Daftar Gratis</a>
-              <a class="waves-effect waves-light btn green" href="maincontent.html">Cari Sponsor</a>
+              <a class="waves-effect waves-light btn green" href="<?php echo base_url() ?>sponsor/sponsorList">Cari Sponsor</a>
               <div class="section"></div>
           </div>
         </div>
@@ -233,8 +104,6 @@
       </div>
     </div>
   </footer>
-
-
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.2.min.js"></script>

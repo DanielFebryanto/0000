@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../css/mycss.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+
+      <div class="navbar-fixed">
+      <nav class="#303f9f indigo darken-2 fixed">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo" style="padding-left:250px">
+                <!--<img src="../image/logobca1.png" width="300px">-->
+                <span class="hide-on-med-and-down"><i>Welcome Admin Event</i></span>
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <!--<li><a href="#!">Sign In</a></li>
+              <li><a href="#!">Register</a></li>-->
+              <li><a href="../maincontent.html">Get Sponsor</a></li>
+              <li><a class="waves-effect waves-light btn" href="#!">Logout</a></li>
+            </ul>
+            <ul class="side-nav fixed #82b1ff blue accent-1" id="mobile-demo">
+              <li class="logo"><a href="#" class="logo-container">this is logo</a></li>
+              <li><a href="adminevent.html">Home</a></li>
+              <li class="active"><a href="editprofile.html">Edit Profile</a></li>
+              <li><a href="companyacc.html">Company Acc<span class="new badge">4</span></a></li>
+              <!--<li class="active"><a href="akuntansiform.html">Akuntansi</a></li>
+              <li><a href="#">RK Distribusi</a></li>
+              <li><a href="#">Grup Hukum</a></li>
+              <li><a href="#">BS Distribusi</a></li>
+              <li><a href="#">BS UBC</a></li>-->
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+
+
+
+  <div class="main-content" style="height:100vh">
+    <div class="container">
+
+    <div class="section">
+        <h4>Edit Profile</h4>
+        <div class="divider"></div>
+    </div>
+
+    <div class="section"></div>
+
+      <div class="row">
+        <div class="col s6 l6"  style="border: 1px solid black; padding: 0px 50px">
+          <form class="" action="index.html" method="post">
+            <div class="row">
+             <form class="col s12">
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="text" class="validate">
+                   <label for="nama">Nama</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="email" class="validate">
+                   <label for="email">Email</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="text" class="validate">
+                   <label for="tlp">No Telepon</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="url" class="validate">
+                   <label for="url">Website</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="text" class="validate">
+                   <label for="alamat">Alamat</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="text" class="validate">
+                   <label for="portofolio">Portofolio</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <textarea id="textarea1" class="materialize-textarea"></textarea>
+                   <label for="about">About</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="text" type="text" class="validate">
+                   <label for="username">Username</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                   <input id="password" type="text" class="validate">
+                   <label for="password">Password</label>
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s12">
+                  <a class="waves-effect waves-light btn">Save Change</a>
+                 </div>
+               </div>
+             </form>
+           </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+      <script type="text/javascript" src="../js/myjs.js"></script>
+      <script type="text/javascript">
+        $('.button-collapse').sideNav('show');
+      </script>
+    </body>
+  </html>

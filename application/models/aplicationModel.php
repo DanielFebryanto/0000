@@ -1,15 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ApplicationModel extends CI_Model {
+class AplicationModel extends CI_Model {
 	function doLoginMember(){
 		$cek = $this->db->get_where('member',array('username'=>$_POST['username'],'password'=>$_POST['password']));
 
 		if($cek->num_rows() == 1){
 			foreach ($cek->result_array() as $row) {
-				$sessionVal = arra(
-					'username'=>$row['username'],
-					'password'=>$row['passeord'],
+				$sessionVal = array(
+					'username'=>$row['nama_member'],
+					'id'=>$row['id_member'],
+					'password'=>$row['password'],
 					'email'=>$row['email'],
 					'userRole'=>'Member'
 					);
@@ -26,8 +27,9 @@ class ApplicationModel extends CI_Model {
 
 		if($cek->num_rows() == 1){
 			foreach ($cek->result_array() as $row) {
-				$sessionVal = arra(
+				$sessionVal = array(
 					'username'=>$row['username'],
+					'id'=>$row['idsponsor'],
 					'password'=>$row['passeord'],
 					'email'=>$row['email'],
 					'userRole'=>'Sponsor'
@@ -56,21 +58,38 @@ class ApplicationModel extends CI_Model {
 	    }
 	 }
 
-	 //getProposalByID()
+	function getAllkategori(){
+		$kat = $this->db->get('kategori_event');
 
-	  function insertProposal($value){
-	    $insert = $this->db->insert('proposal', $value);
+		return $kat;
+	}
+	function getAllIndustri(){
+		$industri = $this->db->get('industri');
 
-	    if ($insert) {
-	      return true;
-	    }else {
-	      return false;
-	    }
-	  }
+		return $industri;
+	}
+	
+	function insertProposal($value){
+	   $insert = $this->db->insert('proposal', $value);
 
-	  function editProposal(,$clause,$value){
-	  	$this->db->where($clause)
-	    $upate = $this->db->upate('proposal', $value);
+	   if ($insert) {
+	     return true;
+	   }else {
+	     return false;
+	   }
+	 }
+	 function getProposalById($clause){
+	 	$this->db->join('member','member.id_member=proposal.member_ID');
+	 	$this->db->join('industri','industri.id_si=proposal.industri_ID');
+	 	$this->db->join('kategori_event','kategori_event.id_ke=proposal.ke_ID');
+
+	 	$list = $this->db->get_where('proposal',$clause);
+
+	 	return $list;
+	 }
+	  function editProposal($clause,$value){
+	  	$this->db->where($clause);
+	    $upate = $this->db->update('proposal', $value);
 
 	    if ($upate) {
 	      return true;
@@ -78,9 +97,12 @@ class ApplicationModel extends CI_Model {
 	      return false;
 	    }
 	  }
-
+	  function getAllSponsor(){
+	  	$sponsor = $this->db->get('sponsor');
+	  	return $sponsor;
+	  }
 	  function getSponsorByID($clause){
-	  	$this->db->join('industri','sponsor.industriID == industri.idIndustri');
+	  	$this->db->join('industri','sponsor.industri_ID = industri.id_si');
 		$sponsor = $this->db->get_where('sponsor',$clause);
 
 		return $sponsor;
