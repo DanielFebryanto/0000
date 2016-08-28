@@ -76,6 +76,7 @@ class Member extends CI_Controller {
   }
   function formProposal(){
     $data['Kat']= $this->aplicationModel->getAllkategori();
+	$data['ind'] = $this->aplicationModel->getAllIndustri();
     $this->load->view('member/formProposal', $data);
   }
   function createProdposal(){
@@ -109,10 +110,12 @@ class Member extends CI_Controller {
                     $tgl_mulai=strftime("%Y-%m-%d", strtotime($_POST['tgl_mulai']));
                     $tgl_end=strftime("%Y-%m-%d", strtotime($_POST['tgl_selesai']));
                      $value = array(
-                      'member_ID'=>1,//$this->session->userdata('id'),
+                      'member_ID'=>$this->session->userdata('id'),
                       'ke_ID'=>$_POST['ke_ID'],
+                      'industri_ID'=>$_POST['industri_ID'],
                       'judul_proposal'=>$_POST['judul_proposal'],
                       'deskripsi'=>$_POST['deskripsi'],
+                      'project_manajer'=>$_POST['project_manajer'],
                       'tgl_mulai'=>$tgl_mulai,
                       'tgl_selesai'=>$tgl_end,
                       'doc'=>$_POST['docName']
@@ -131,6 +134,16 @@ class Member extends CI_Controller {
           //return array('pic'=>$name.$type);
 
         }
+  }
+
+  function approvedList(){
+    $clause = array(
+      'member_ID'=>$this->session->userdata('id'),
+      'status'=>'Approved'
+      );
+    $data['List'] = $this->db->getEventById($clause);
+
+    $this->load->view('/');
   }
 
 }//end of class member

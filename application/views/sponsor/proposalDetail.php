@@ -39,7 +39,6 @@
             </ul>
           </div>
 
-
           <div class="title">
             <h5>Kategori Event</h5>
           </div>

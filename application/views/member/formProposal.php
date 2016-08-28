@@ -169,6 +169,17 @@
                           <label for="">Event Konten</label>
                         </div>
                       </div>
+					  <div class="row">
+                        <div class="input-field col s10 offset-s1">
+                          <select name="industri_ID">
+                            <option hidden selected>Choose your option</option>
+                            <?php foreach ($ind->result_array() as $in) { ?>
+                             <option value="<?php echo $in['id_si'] ?>"><?php echo $in['nama_si'] ?></option>
+                            <?php } ?>
+                            </select>
+                          <label>Kategori Event</label>
+                        </div>
+                      </div>
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
                           <input id="" type="text" class="datepicker" name="tgl_mulai">

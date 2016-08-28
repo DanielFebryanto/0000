@@ -12,8 +12,6 @@
     </head>
 
     <body>
-
-
       <div class="navbar-fixed">
       <?php $this->load->view('sponsor/sponsorHeader') ?>
     </div>
@@ -24,22 +22,20 @@
 
       <div class="section">
         <div class="row">
-      <form class="col s12">
+      <form action="<?php echo base_url() ?>sponsor/doApprove" method="post" class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <textarea required id="textarea1" class="materialize-textarea" length="120"></textarea>
+            <textarea required id="textarea1" class="materialize-textarea" length="120" name="message"></textarea>
             <label for="textarea1">Textarea</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-          <?php foreach($approve->result_array() as $row){ ?>
-            <input type="hidden" name="id_proposal" value="<?php echo $row['idProp'] ?>">
-            <input type="hidden" name="id_member" value="<?php echo $row['id_member'] ?>">
-            <input type="hidden" name="idsponsor" value="<?php echo $row['idsponsor'] ?>">
+            <input type="hidden" name="proposal_ID" value="<?php echo $id_proposal ?>">
+            <input type="hidden" name="id_member" value="<?php echo $id_member ?>">
+            <input type="hidden" name="idsponsor" value="<?php echo $idsponsor ?>">
             <a class="waves-effect waves-light btn red">Back</a>
-            <a class="waves-effect waves-light btn">Accept</a>
-          <?php } ?>
+            <button class="waves-effect waves-light btn"> Accept</button>
           </div>
         </div>
       </form>

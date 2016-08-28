@@ -78,6 +78,7 @@ class AplicationModel extends CI_Model {
 	     return false;
 	   }
 	 }
+
 	 function getProposalById($clause){
 	 	$this->db->join('member','member.id_member=proposal.member_ID');
 	 	$this->db->join('industri','industri.id_si=proposal.industri_ID');
@@ -87,6 +88,7 @@ class AplicationModel extends CI_Model {
 
 	 	return $list;
 	 }
+
 	  function editProposal($clause,$value){
 	  	$this->db->where($clause);
 	    $upate = $this->db->update('proposal', $value);
@@ -97,6 +99,7 @@ class AplicationModel extends CI_Model {
 	      return false;
 	    }
 	  }
+
 	  function getAllSponsor(){
 	  	$sponsor = $this->db->get('sponsor');
 	  	return $sponsor;
@@ -119,7 +122,7 @@ class AplicationModel extends CI_Model {
 	    }
 	  }
 
-	function createEvent($value){
+	function insertEvent($value){
 	  	$insert = $this->db->insert('event',$value);
 
 	  	if($insert){
@@ -131,6 +134,7 @@ class AplicationModel extends CI_Model {
 	function getEventById($clause){
 		$this->db->join('proposal','proposal.id_proposal=event.proposal_ID');
 		$this->db->join('sponsor','sponsor.idsponsor=event.sponsor_ID');
+		$this->db->join('member','member.id_member=event.member_ID');
 		$event = $this->db->get_where('event',$clause);
 
 		return $event;
@@ -144,5 +148,4 @@ class AplicationModel extends CI_Model {
 	  	}
 	  	return false;
 	 }
-
 }//end class

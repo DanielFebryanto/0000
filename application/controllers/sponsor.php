@@ -55,7 +55,8 @@ class Sponsor extends CI_Controller {
 
   	$this->load->view('sponsorList', $data);
   }
-  function offer($id){
+  function offer(){
+    $id = $this->session->userdata('id');
   	$sponsorClause = array('idsponsor'=>$id);
   	$spo = $this->aplicationModel->getSponsorByID($sponsorClause);
   	foreach ($spo->result_array() as $val) {
@@ -78,7 +79,9 @@ class Sponsor extends CI_Controller {
     foreach($mem->result_array() as $row){
       $id_member = $row['member_ID'];
     }
-    $data['approve'] = array('idProp'=>$idProp, 'idsponsor'=>$idsponsor,'id_member'=>$id_member);
+    $data['id_proposal'] = $idProp;
+    $data['idsponsor'] = $idsponsor;
+    $data['id_member'] =$id_member;
 
     $this->load->view('sponsor/approve', $data);
    }
@@ -86,8 +89,8 @@ class Sponsor extends CI_Controller {
     $value = array(
       'proposal_ID'=>$_POST['proposal_ID'],
       'sponsor_ID'=>$_POST['idsponsor'],
-      'pesan_sponsor'=>$_POST['pesan'],
-      'status'=>'Accept'
+      'pesan_sponsor'=>$_POST['message'],
+      'status'=>'Accept',
       'tgl_buat'=>date("Y-m-d")
       );
 
