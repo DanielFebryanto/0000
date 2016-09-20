@@ -172,18 +172,12 @@ class Member extends CI_Controller {
     $this->load->view('member/myProposal', $data);
   }
   
-  function approvedList($offset = 0){
+  function approvedList(){
     $clause = array(
       'event.member_ID'=>$this->session->userdata('id'),
       'event.status'=>'Accept'
       );
-    $per_page = 2;
-    $jml = $this->aplicationModel->getEventById($clause);
-    $url=base_url().'member/proposalList';
-    $data['pagination']=$this->pagination($url, $per_page, $jml);
-    $data['offset']=$offset;
-    $data['list'] = $this->aplicationModel->getEventById($clause, $per_page, $data['offset']);
-
+    $data['list'] = $this->aplicationModel->getEventById($clause);
     $this->load->view('member/companyAcc', $data);
   }
 

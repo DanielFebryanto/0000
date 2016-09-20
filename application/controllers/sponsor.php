@@ -61,7 +61,7 @@ class Sponsor extends CI_Controller {
   	$this->load->view('sponsor/proposalDetail', $data);
   }
 
-  function offer($offset = 0){
+  function offer(){
     $id = $this->session->userdata('id');
 
     $sponsorClause = array(
@@ -76,26 +76,16 @@ class Sponsor extends CI_Controller {
       'industri_ID'=>$industri,
       'status'=>'Open'
       );
-    $per_page = 2;
-    $jml = $this->aplicationModel->getProposalById($clause);
-    $url=base_url().'sponsor/offer';
-    $data['pagination']=$this->pagination($url, $per_page, $jml);
-    $data['offset'] = $offset;
-    $data['list'] = $this->aplicationModel->pagingProposalById($clause, $per_page, $data['offset']);
+    $data['list'] = $this->aplicationModel->getProposalById($clause);
 
     $this->load->view('sponsor/proposalList', $data);
   }
 
-  function proposalDisetujui($offset = 0){
+  function proposalDisetujui(){
     $clause = array(
       'sponsor_ID'=>$this->session->userdata('id')
       );
-    $per_page = 5;
-    $url=base_url().'sponsor/proposalDisetujui';
-    $jml = $this->aplicationModel->getEventByID($clause);
-    $data['pagination']=$this->pagination($url, $per_page, $jml);
-    $data['offset'] = $offset;
-    $data['list'] = $this->aplicationModel->getEventByID($clause, $per_page, $data['offset']);
+    $data['list'] = $this->aplicationModel->getEventByID($clause);
     $this->load->view('sponsor/proposalList', $data);
   }
 
