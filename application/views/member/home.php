@@ -31,7 +31,7 @@
           </p>
 
           <div class="butt-event">
-            <a href="<?php echo base_url() ?>sponsor/SponsorList" class="waves-effect waves-light btn">button</a>
+            <a href="<?php echo base_url() ?>member/SponsorList" class="waves-effect waves-light btn">Lihat Sponsor Kami</a>
             <br>
             <span style="font-size:12px; font-style:italic">Note: you only propose 5 times until you got a new acc sponsor</span>
           </div>

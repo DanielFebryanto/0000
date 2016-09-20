@@ -28,11 +28,9 @@
       <!-- end of navbar top -->
       <!-- content company -->
       <div class="container bor #fafafa grey lighten-5">
-      <div class="notif">
       <?php if($this->session->flashdata('error')){ ?>
-          <span style="color:red;"><?php echo $this->session->flashdata('error') ?></span>
-        <?php } ?>
-      </div> 
+     <div class="card-panel #d50000 red accent-4 white-text"><?php echo $this->session->flashdata('error') ?></div>
+    <?php } ?>
       <div class="notif">
       <?php if($this->session->flashdata('sukses')){ ?>
           <span style="color:green;"><?php echo $this->session->flashdata('sukses') ?></span>
@@ -52,13 +50,13 @@
                   <!-- form login here -->
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="" type="text" class="validate" name="username">
+                      <input id="" type="text" class="validate" name="username required="required"/>
                       <label for="username">Username</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="password" type="password" class="validate" name="password">
+                      <input required id="password" type="password" class="validate" name="password">
                       <label for="password">Password</label>
                     </div>
                   </div>
@@ -97,19 +95,19 @@
                   <!-- form login here -->
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input type="text" class="validate" name="nama_sponsor">
+                      <input type="text" class="validate" name="nama_sponsor" required>
                       <label for="name">Sponsor Name</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="text" type="email" name="email" class="validate">
+                      <input id="text" type="email" name="email" class="validate" required>
                       <label for="email">Email</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="text" type="url" class="validate" name="website">
+                      <input id="text" type="url" class="validate" name="website" required>
                       <label for="website">Website</label>
                     </div>
                   </div>
@@ -127,19 +125,19 @@
 
                  <div class="row">
                    <div class="input-field col s10 offset-s1">
-                     <textarea id="textarea1" name="about_sponsor" class="materialize-textarea" ></textarea>
+                     <textarea id="textarea1" name="about_sponsor" class="materialize-textarea" required></textarea>
                      <label for="about">About</label>
                    </div>
                  </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="text" type="text" class="validate" name="username">
+                      <input id="text" type="text" class="validate" name="username" required>
                       <label for="username">Username</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="password" type="password" class="validate" name="password">
+                      <input id="password" type="password" class="validate" name="password" required>
                       <label for="password">Password</label>
                     </div>
                   </div>

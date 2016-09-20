@@ -37,7 +37,6 @@
           <div class="divider"></div>
 
         <?php } ?>
-          <
         </div><!-- end of content company -->
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-2.1.2.min.js"></script>
