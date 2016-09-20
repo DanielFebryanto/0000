@@ -123,7 +123,7 @@
             </ul>
           </div>
           <?php if($row['pesan_sponsor'] != ""){ ?>
-          <div class="content-about">
+          <div class="content-about"> 
             <ul class="browser-default">
               <li>
                 <p>
