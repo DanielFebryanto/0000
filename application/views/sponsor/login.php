@@ -95,7 +95,7 @@
                   <!-- form login here -->
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input type="text" class="validate" name="nama_sponsor" required>
+                      <input type="text" class="validate" name="nama_sponsor" required >
                       <label for="name">Sponsor Name</label>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
                  </div>
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="text" type="text" class="validate" name="username" required>
+                      <input id="username" type="text" class="validate" name="username" required>
                       <label for="username">Username</label>
                     </div>
                   </div>
@@ -159,9 +159,10 @@
             </div>-->
           </div>
         </div>
+        </div>
 
       </div><!-- end of content company -->
-
+      </div>
 
 
 
@@ -169,5 +170,14 @@
       <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-2.1.2.min.js"></script>
       <script type="text/javascript" src="<?php echo base_url() ?>assets/js/materialize.min.js"></script>
       <script type="text/javascript" src="<?php echo base_url() ?>assets/js/myjs.js"></script>
+      <script>
+      $(function () {
+        $("#username").click(function () {
+         alert("sss");
+        }
+        });
+        
+      });
+      </script>
     </body>
   </html>

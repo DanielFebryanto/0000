@@ -142,7 +142,7 @@
                     <!-- form login here -->
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
-                          <input id="" type="text" class="validate" name="judul_proposal">
+                          <input id="" type="text" class="validate" name="judul_proposal" required>
                           <label for="">Judul Proposal</label>
                         </div>
                       </div>
@@ -159,13 +159,13 @@
                       </div>
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
-                          <input id="" type="text" class="validate" name="project_manajer">
+                          <input id="" type="text" class="validate" name="project_manajer" required>
                           <label for="">Project Manajer</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
-                          <input id="" type="text" class="validate" name="deskripsi">
+                          <input id="" type="text" class="validate" name="deskripsi" required>
                           <label for="">Event Konten</label>
                         </div>
                       </div>
@@ -182,13 +182,13 @@
                       </div>
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
-                          <input id="" type="text" class="datepicker" name="tgl_mulai">
+                          <input id="" type="text" class="datepicker" name="tgl_mulai" required>
                           <label for="">Tanggal Mulai</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s10 offset-s1">
-                          <input id="" type="text" class="datepicker" name="tgl_selesai">
+                          <input id="" type="text" class="datepicker" name="tgl_selesai" required>
                           <label for="">Tanggal Selesai</label>
                         </div>
                       </div>
@@ -196,7 +196,7 @@
                         <div class="file-field input-field col s10 offset-s1">
                           <div class="btn">
                             <span>File</span>
-                            <input type="file" name="dokumen">
+                            <input type="file" name="dokumen" required> 
                           </div>
                           <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" name="docName">
