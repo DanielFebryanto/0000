@@ -37,7 +37,7 @@
           <div class="col s12 l4 center boxv">
             <!-- Promo Content 1 goes here -->
             <h4>Identitas Profesional</h4>
-            <img src="<?php echo base_url()?>GilangCI/assets/img/pencarikerja.jpg"  />
+            <img src="<?php echo base_url()?>assets/img/pencarikerja.jpg"  />
             <br />
             <caption>
               <p class="presisi">
@@ -50,7 +50,7 @@
           <div class="col s12 l4 center boxv">
             <!-- Promo Content 2 goes here -->
             <h4>Profil Anda</h4>
-            <img src="<?php echo base_url()?>GilangCI/assets/img/pencarikerja.jpg" />
+            <img src="<?php echo base_url()?>assets/img/pencarikerja.jpg" />
             <br />
             <caption>
               <p class="presisi">
@@ -62,7 +62,7 @@
           <div class="col s12 l4 center boxv">
             <!-- Promo Content 3 goes here -->
             <h4>Iklan Sponsor Lengkap</h4>
-            <img src="<?php echo base_url()?>GilangCI/assets/img/pencarikerja.jpg" />
+            <img src="<?php echo base_url()?>assets/img/pencarikerja.jpg" />
             <br />
             <caption>
               <p class="presisi">
@@ -83,24 +83,24 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <h5 class="white-text">E-Proposal</h5>
+          <p class="grey-text text-lighten-4">E-Proposal adalah sebuah portal yang memudahkan kerjasama antara Event Organizer 
+          dan Calon Sponsor dalam menjalankan sebuah acara dan menjalin kerjasama yang saling menguntungkan, E-Proposal juga berisi para Event Organizer dan Calon Sponsor yang sangat profesional</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+          <h5 class="white-text">Kontak</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Jl. Sudirman Kav No.51, Gedung Borneo, Jakarta Selatan, DKI Jakarta, Indonesia </a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">No. Telepon : (021) 345 435 22</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Hubungi Kami : info@e-proposal.com</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      © 2016 Copyright E-Proposal. All Right Reserved
+      
       </div>
     </div>
   </footer>

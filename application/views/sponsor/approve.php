@@ -30,12 +30,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s6">
-            <input type="hidden" name="proposal_ID" value="<?php echo $id_proposal ?>">
-            <input type="hidden" name="id_member" value="<?php echo $id_member ?>">
-            <input type="hidden" name="idsponsor" value="<?php echo $idsponsor ?>">
-            <a class="waves-effect waves-light btn red">Back</a>
-            <button class="waves-effect waves-light btn"> Accept</button>
+         <input type="hidden" value="<?php echo $id_proposal ?>" name="proposal_ID">
+         <input type="hidden" value="<?php echo $idsponsor ?>" name="idsponsor">
+         <input type="hidden" value="<?php echo $id_member ?>" name="id_member">
+         <button class="waves-effect waves-light btn"> Accept</button>
           </div>
         </div>
       </form>

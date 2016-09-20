@@ -1,6 +1,6 @@
 <nav>
         <div class="nav-wrapper container">
-          <a href="<?php echo base_url() ?>" class="brand-logo">E-Proposal</a>
+          <a href="<?php echo base_url() ?>" class="brand-logo">E-PROPOSAL</a>
           <!-- trigger mobile button -->
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <!-- main menu-->

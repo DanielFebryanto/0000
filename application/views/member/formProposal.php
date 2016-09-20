@@ -206,7 +206,7 @@
                     </div>
                   </div>
                   <div class="card-action" style="padding: 30px">
-                    <a href="aboutsponsor.html" class="waves-effect waves-light btn-large">Back</a>
+                    <a href="<?php echo base_url() ?>member/home" class="waves-effect waves-light btn-large">Back</a>
                     <button class="waves-effect waves-light yellow btn-large black-text">Propose</button>
                   </div>
                 </div>

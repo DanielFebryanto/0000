@@ -17,9 +17,12 @@
         <?php $this->load->view('sponsor/sponsorHeader') ?>
         
     <div class="main-content" style="height:100vh">
+    <h4>Proposal yang Anda Setujui </h4>
+    <hr/>
     <div class="container bor">
       <div class="#fafafa grey lighten-5">
-        <?php foreach($list->result_array() as $row){ ?>
+        <?php foreach($list->result_array() as $row){
+        $offset = 0; ?>
         <div class="row section">
           <div class="col s8 l8 offset-l1">
             <h4 class="jud-main"><?php echo $row['judul_proposal'] ?></h4>
@@ -35,7 +38,7 @@
         </div>
         <div class="divider"></div>
         <?php } ?>
-
+        <?php echo $pagination ?>
       </div><!-- end of content company -->
     </div>
   </div>
