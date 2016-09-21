@@ -22,7 +22,7 @@
               <h4>Sponsor Online Untuk EO</h4>
               <p>Buruan Daftar</p>
               <a class="waves-effect waves-light btn yellow black-text modal-trigger" href="#modal2">Daftar Gratis</a>
-              <a class="waves-effect waves-light btn green" href="<?php echo base_url() ?>sponsor/sponsorList">Cari Sponsor</a>
+              <a class="waves-effect waves-light btn green" href="<?php echo base_url() ?>sponsor/sponsorList">Lihat Sponsor</a>
               <div class="section"></div>
           </div>
         </div>
