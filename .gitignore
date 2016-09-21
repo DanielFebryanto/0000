@@ -24,3 +24,15 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+*.php
+pag/application/views/index.html
+*.html
+*.js
+*.css
+*.md
+*.png
+*.xml
+*.txt
+*.psd
+*.ttf
+*.as

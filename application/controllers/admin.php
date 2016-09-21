@@ -22,14 +22,16 @@ class Admin extends CI_Controller {
       redirect('');
     }else{
       $this->session->set_flashdata('error','Gagal');
-      redirect('');
+      redirect('listKategori');
     }
   }
   function listKategori(){
     $data['list'] = $this->aplicationModel->getAllKategori();
   	$this->load->view('admin/table');
   }
-
+  function listIndustri(){
+    
+  }
   function formIndustri(){
     $data['list'] = $this->aplicationModel->getAllIndustri();
     $this->load->view();
@@ -44,10 +46,10 @@ class Admin extends CI_Controller {
     $insert = $this->aplicationModel->insertKategori($value);
     if($insert == true){
       $this->session->set_flashdata('sukses','Berhasil');
-      redirect('');
+      redirect('listIndustri');
     }else{
       $this->session->set_flashdata('error','Gagal');
-      redirect('');
+      redirect('formIndustri');
     }
   }
 
