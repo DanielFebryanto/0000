@@ -37,13 +37,18 @@
                   <tbody>
                    <?php 
                     $no = 1; 
-                    foreach($list->result_array() as $row){?>
+                    foreach($list->result_array() as $row){
+                      $go = 'proposalDetail';
+                      if($row['status'] == 'Negoisasi'){
+                        $go = 'ApproveDetail';
+                      }
+                      ?>
                    <tr>
                    <td> <?php echo $no ?></td>
                    <td> <?php echo $row['judul_proposal'] ?></td>
                    <td> <?php echo $row['project_manajer'] ?></td>
                    <td> <?php echo $row['status'] ?></td>
-                   <td><a class="waves-effect waves-light btn" href="<?php echo base_url() ?>member/proposalDetail/<?php echo $row['id_proposal'] ?>.html">Lihat</a></td>
+                   <td><a class="waves-effect waves-light btn" href="<?php echo base_url() ?>member/<?php echo $go ?>/<?php echo $row['id_proposal'] ?>.html">Lihat</a></td>
                     </tr>
                    <?php 
 

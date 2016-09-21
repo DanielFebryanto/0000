@@ -161,9 +161,15 @@ class Member extends CI_Controller {
   }
   function proposalDetail($idProp){
     $clause = array('id_Proposal'=>$idProp);
-    $data['detail'] = $this->aplicationModel->getEventById($clause);
+    $data['detail'] = $this->aplicationModel->getProposalById($clause);
 
     $this->load->view('member/detailProposal', $data);
+  }
+  function ApproveDetail($idProp){
+    $clause = array('id_Proposal'=>$idProp);
+    $data['detail'] = $this->aplicationModel->getEventById($clause);
+
+    $this->load->view('member/proposalAprove', $data);
   }
 
   function proposalList(){

@@ -40,7 +40,7 @@
                    <td> <?php echo $row['judul_proposal'] ?></td>
                    <td> <?php echo $row['project_manajer'] ?></td>
                    <td> <?php echo $row['status'] ?></td>
-                   <td><a class="waves-effect waves-light btn" href="<?php echo base_url() ?>member/proposalDetail/<?php echo $row['id_proposal'] ?>.html">Lihat</a></td>
+                   <td><a class="waves-effect waves-light btn" href="<?php echo base_url() ?>member/ApproveDetail/<?php echo $row['id_proposal'] ?>.html">Lihat</a></td>
                     </tr>
                    <?php 
 

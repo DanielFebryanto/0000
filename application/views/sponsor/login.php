@@ -50,7 +50,7 @@
                   <!-- form login here -->
                   <div class="row">
                     <div class="input-field col s10 offset-s1">
-                      <input id="" type="text" class="validate" name="username required="required"/>
+                      <input id="" type="text" class="validate" name="username" required/>
                       <label for="username">Username</label>
                     </div>
                   </div>

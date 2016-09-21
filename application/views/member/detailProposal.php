@@ -122,17 +122,7 @@
               </li>
             </ul>
           </div>
-          <?php if($row['pesan_sponsor'] != ""){ ?>
-          <div class="content-about"> 
-            <ul class="browser-default">
-              <li>
-                <p>
-                  <?php echo $row['pesan_sponsor'] ?>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <?php } if($row['status'] == 'Open'){ ?>
+          <?php if($row['status'] == 'Open'){ ?>
           <div class="reg-button-about right">
             <a class="waves-effect waves-light btn-large" href="<?php echo base_url() ?>member/proposalList.html">Back</a>
             <a href="<?php echo base_url() ?>member/formEditProposal/<?php echo $row['id_proposal'] ?>" class="waves-effect waves-light yellow btn-large black-text">Edit</a>

@@ -27,10 +27,11 @@ class Admin extends CI_Controller {
   }
   function listKategori(){
     $data['list'] = $this->aplicationModel->getAllKategori();
-  	$this->load->view('admin/table');
+  	$this->load->view('admin/kategoriList', $data);
   }
   function listIndustri(){
-    
+    $data['list'] = $this->aplicationModel->getAllIndustri();
+    $this->load->view('admin/industriList', $data);
   }
   function formIndustri(){
     $data['list'] = $this->aplicationModel->getAllIndustri();
@@ -55,15 +56,18 @@ class Admin extends CI_Controller {
 
   function listMember(){
     $data['list'] = $this->aplicationModel->getAllMember();
-    $this->load->view('admin/tableMember', $data);
+    $this->load->view('admin/memberList', $data);
   }
 
   function listSponsor(){
     $data['list'] = $this->aplicationModel->getAllSponsor();
-    $this->load->view('admin/tableSponsor', $data);
+    $this->load->view('admin/sponsorList', $data);
   }
 
   function listEvent(){
-    $data['list']=>$this->aplicationModel->getAllEvent();
+    $data['list']=$this->aplicationModel->getAllEvent();
+  }
+  function deleteKategori($id){
+    $clause = array('id_ke'=>$id);
   }
 }

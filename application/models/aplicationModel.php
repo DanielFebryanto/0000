@@ -40,7 +40,10 @@ class AplicationModel extends CI_Model {
 			return false;
 		}
 	}
-
+	function getAllMember(){
+		$data = $this->db->get('member','DESC');
+		return $data;
+	}
 	function getMemberByID($clause){
 		$member = $this->db->get_where('member',$clause);
 
@@ -139,6 +142,7 @@ class AplicationModel extends CI_Model {
 
 	  function getAllSponsor(){
 	  	$this->db->get_where('sponsor');
+	  	$this->db->join('industri','sponsor.industri_ID = industri.id_si');
 	  	$sponsor = $this->db->get('sponsor');
 	  	return $sponsor;
 	  }
