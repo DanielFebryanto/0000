@@ -12,10 +12,13 @@
     </head>
 
     <body>
-<?php echo $this->session->flashdata('error') ?>
+
     <!-- navbar-top -->
       <?php $this->load->view('header') ?>
     <!-- banner -->
+    <?php if($this->session->flashdata('error')){ ?>
+     <div class="card-panel #d50000 red accent-4 white-text"><?php echo $this->session->flashdata('error') ?></div>
+    <?php } ?>
       <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-item valign-wrapper red white-text row" href="#one!">
           <div class="valign center-block col s12 m6 l4 #f48fb1 pink lighten-3">
@@ -28,7 +31,6 @@
         </div>
       </div>
   <!-- end of banner -->
-
 
   <!-- promotion -->
   <div class="container section pad">

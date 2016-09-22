@@ -29,9 +29,27 @@ class AplicationModel extends CI_Model {
 				$sessionVal = array(
 					'username'=>$row['username'],
 					'id'=>$row['idsponsor'],
-					'password'=>$row['passeord'],
+					'password'=>$row['password'],
 					'email'=>$row['email'],
 					'userRole'=>'Sponsor'
+					);
+				$this->session->set_userdata($sessionVal);
+				return true;
+			}
+		}else{
+			return false;
+		}
+	}
+	function doLoginAdmin(){
+		$cek = $this->db->get_where('admin',array('username'=>$_POST['username'],'password'=>$_POST['password']));
+		if($cek->num_rows() == 1){
+			foreach ($cek->result_array() as $row) {
+				$sessionVal = array(
+					'username'=>$row['username'],
+					'id'=>$row['id_admin'],
+					'password'=>$row['password'],
+					'email'=>$row['email'],
+					'userRole'=>'Admin'
 					);
 				$this->session->set_userdata($sessionVal);
 				return true;
@@ -60,8 +78,27 @@ class AplicationModel extends CI_Model {
 	    }
 	 }
 
+
+	 function insertIndustri($value){
+	 	$insert = $this->db->insert('industri', $value);
+
+	 	if($insert){
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+	 }
+	 function updateIndustri($clause, $value){
+		$this->db->where($clause);
+		$update = $this->db->update('industri',$value);
+		if($update){
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+	}
 	 function insertKategori($value){
-	 	$insert = $this->db->insert('kategori', $value);
+	 	$insert = $this->db->insert('kategori_event', $value);
 
 	 	if($insert){
 	 		return true;
@@ -74,12 +111,32 @@ class AplicationModel extends CI_Model {
 
 		return $kat;
 	}
+	function getkategoriByClause($clause){
+		$this->db->where($clause);
+		$kat = $this->db->get('kategori_event');
+
+		return $kat;
+	}
+	function updateKategori($clause, $value){
+		$this->db->where($clause);
+		$update = $this->db->update('kategori_event',$value);
+		if($update){
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+	}
 	function getAllIndustri(){
 		$industri = $this->db->get('industri');
 
 		return $industri;
 	}
-	
+	function getIndustriByClause($clause){
+		$this->db->where($clause);
+		$ind = $this->db->get('industri');
+
+		return $ind;
+	}
 	function insertProposal($value){
 	   $insert = $this->db->insert('proposal', $value);
 
@@ -89,11 +146,11 @@ class AplicationModel extends CI_Model {
 	     return false;
 	   }
 	 }
-	 
 	 function getAllProposal(){
 	 	$this->db->join('member','member.id_member=proposal.member_ID');
 	 	$this->db->join('industri','industri.id_si=proposal.industri_ID');
 	 	$this->db->join('kategori_event','kategori_event.id_ke=proposal.ke_ID');
+	 	$this->db->order_by('id_proposal','DESC');
 	 	$list = $this->db->get_where('proposal');
 	 	return $list;
 	 }
@@ -123,8 +180,8 @@ class AplicationModel extends CI_Model {
 	 	$this->db->join('member','member.id_member=proposal.member_ID');
 	 	$this->db->join('industri','industri.id_si=proposal.industri_ID');
 	 	$this->db->join('kategori_event','kategori_event.id_ke=proposal.ke_ID');
-
-	 	$list = $this->db->get_where('proposal',$clause);
+	 	$this->db->order_by('id_proposal','DESC');
+	 	$list = $this->db->get_where('proposal',$clause,'DESC');
 
 	 	return $list;
 	 }
@@ -186,6 +243,7 @@ class AplicationModel extends CI_Model {
 		$this->db->join('proposal','proposal.id_proposal=event.proposal_ID');
 		$this->db->join('sponsor','sponsor.idsponsor=event.sponsor_ID');
 		$this->db->join('member','member.id_member=event.member_ID');
+		$this->db->order_by('tgl_buat','DESC');
 		$event = $this->db->get('event');
 
 		return $event;
@@ -196,6 +254,7 @@ class AplicationModel extends CI_Model {
 		$this->db->join('kategori_event','kategori_event.id_ke=proposal.ke_ID');
 		$this->db->join('sponsor','sponsor.idsponsor=event.sponsor_ID');
 		$this->db->join('member','member.id_member=event.member_ID');
+		$this->db->order_by('tgl_buat','DESC');
 		$event = $this->db->get_where('event',$clause);
 
 		return $event;
