@@ -177,7 +177,7 @@
                              <option value="<?php echo $in['id_si'] ?>"><?php echo $in['nama_si'] ?></option>
                             <?php } ?>
                             </select>
-                          <label>Kategori Event</label>
+                          <label>industri Sponsor</label>
                         </div>
                       </div>
                       <div class="row">

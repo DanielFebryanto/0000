@@ -21,11 +21,11 @@
     <?php } ?>
       <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-item valign-wrapper red white-text row" href="#one!">
-          <div class="valign center-block col s12 m6 l4 #f48fb1 pink lighten-3">
+          <div class="valign center-block col s12 m6 l4 ">
               <h4>Sponsor Online Untuk EO</h4>
               <p>Buruan Daftar</p>
               <a class="waves-effect waves-light btn yellow black-text modal-trigger" href="#modal2">Daftar Gratis</a>
-              <a class="waves-effect waves-light btn green" href="<?php echo base_url() ?>sponsor/sponsorList">Lihat Sponsor</a>
+              <a class="waves-effect waves-light btn green" href="<?php echo base_url() ?>member/sponsorList">Lihat Sponsor</a>
               <div class="section"></div>
           </div>
         </div>
